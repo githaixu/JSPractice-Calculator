@@ -2,15 +2,19 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>計算機App</title>
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
+    <!-- grid wrapper -->
     <div class="calculator-grid">
+      <!-- 結果を表示する箇所 -->
       <div class="output">
         <div data-previous-oprrand class="previous-operand"></div>
         <div data-current-operand class="current-operand">0</div>
       </div>
+      <!-- 数字と演算ボタン -->
+      <!-- use data attributes to seperate from css and js -->
       <button data-all-clear class="span-two">AC</button>
       <button data-delete>DEL</button>
       <button data-operation>÷</button>
