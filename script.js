@@ -71,7 +71,7 @@ class Calculator {
   }
 }
 
-//cash the DOM
+//cash the DOM by data attributes
 const numberButtons = document.querySelectorAll('[data-number]');
 const operationButtons = document.querySelectorAll('[data-operation]');
 const deleteButton = document.querySelector('[data-delete]');
@@ -79,7 +79,7 @@ const allClearButton = document.querySelector('[data-all-clear]');
 const equalsButton = document.querySelector('[data-equals]');
 const previousOperandTextElement = document.querySelector('[data-previous-oprrand]');
 const currentOperandTextElement = document.querySelector('[data-current-operand]');
-
+// create instance
 const calculator = new Calculator(previousOperandTextElement, currentOperandTextElement);
 
 //add event to the numberButtons
@@ -96,17 +96,17 @@ operationButtons.forEach(button => {
     calculator.updateDisplay();
   })
 });
-
+//add event to the equalsButton
 equalsButton.addEventListener('click', ()=>{
   calculator.compute();
   calculator.updateDisplay();
 });
-
+//add event to the allClearButton
 allClearButton.addEventListener('click', ()=>{
   calculator.clear();
   calculator.updateDisplay();
 });
-
+//add event to the deleteButton
 deleteButton.addEventListener('click', ()=>{
   calculator.delete();
   calculator.updateDisplay();
